@@ -5,14 +5,16 @@ import tk.mybatis.mapper.code.Style;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
+@Table
 @NameStyle(Style.camelhumpAndLowercase)
 public class Hero {
 
     @Id
     @GeneratedValue(generator = "JDBC")
-    private long id;
+    private Long id;
     /**
      * 用户名
      */
@@ -34,11 +36,11 @@ public class Hero {
      */
     private Date updateAt;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
